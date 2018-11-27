@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FilmBase</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+    
+</head>
+<body onload="onLoad();">
+  <div class="container">
+    <img src="images/logo.png" alt="logo" id="logo" width="250px">
+    <form action="">
+      <input type="text" id="input-name" placeholder="Movie Name">
+      <input type="number" id="input-year" placeholder="year" min="1874" max="">
+      <input type="submit" id="submit" onsubmit="onSubmit()" value="Search">
+    </form>
+  </div>
+
+  <div id="results-div">
+    <div class="container">
+      <hr>
+      <div id="show-results">
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/main.js"></script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

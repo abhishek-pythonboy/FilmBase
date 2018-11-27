@@ -1,0 +1,88 @@
+@import 'reset';
+
+@mixin crossBrowser($property, $css) {
+    -webkit-#{$property} : $css;
+    -moz-#{$property} : $css;
+    -o-#{$property} : $css;
+    #{$property} : $css;
+}
+
+html, body, * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #222;
+}
+
+.container {
+  width: 70%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+img#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  * {
+    margin-right: 5px;
+    border:1px solid #f1f1f1;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  input[type='text']{
+    width: 300px;
+  }
+  input[type='number']{
+    width: 100px;
+  }
+  #submit {
+    padding: 0 30px;
+    border:0;
+    background-color: #D52F2F;
+    color:#fff;
+  }
+}
+
+#results-div {
+  color:#fff;
+  hr {
+    border:1px solid #333;
+  }
+}
+
+#show-results {
+  margin-top: 40px;
+  .result {
+    padding: 5px;
+    margin: 3px;
+    // box-shadow: 2px 2px 2px #151515;
+    // background-color: #252525;
+    display: flex;
+    align-items: center;
+    @include crossBrowser(transition, background-color 300ms);
+    &:hover {
+      background-color: #333;
+    }
+    .thumbnail {
+      height: 50px;
+    }
+    .info {
+      margin-left: 10px;
+      h2.movie-name {
+        display: inline-block;
+        font-size: 1em;
+        margin-right: 5px;
+      }
+      span.year {
+        color:#888;
+      }
+    }
+  }
+}

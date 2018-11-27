@@ -1,0 +1,159 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 10, ../sass/style.scss */
+html, body, * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 14, ../sass/style.scss */
+body {
+  background-color: #222;
+}
+
+/* line 18, ../sass/style.scss */
+.container {
+  width: 70%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* line 24, ../sass/style.scss */
+img#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 29, ../sass/style.scss */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+/* line 33, ../sass/style.scss */
+form * {
+  margin-right: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
+  padding: 8px;
+}
+/* line 39, ../sass/style.scss */
+form input[type='text'] {
+  width: 300px;
+}
+/* line 42, ../sass/style.scss */
+form input[type='number'] {
+  width: 100px;
+}
+/* line 45, ../sass/style.scss */
+form #submit {
+  padding: 0 30px;
+  border: 0;
+  background-color: #D52F2F;
+  color: #fff;
+}
+
+/* line 53, ../sass/style.scss */
+#results-div {
+  color: #fff;
+}
+/* line 55, ../sass/style.scss */
+#results-div hr {
+  border: 1px solid #333;
+}
+
+/* line 60, ../sass/style.scss */
+#show-results {
+  margin-top: 40px;
+}
+/* line 62, ../sass/style.scss */
+#show-results .result {
+  padding: 5px;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+/* line 70, ../sass/style.scss */
+#show-results .result:hover {
+  background-color: #333;
+}
+/* line 73, ../sass/style.scss */
+#show-results .result .thumbnail {
+  height: 50px;
+}
+/* line 76, ../sass/style.scss */
+#show-results .result .info {
+  margin-left: 10px;
+}
+/* line 78, ../sass/style.scss */
+#show-results .result .info h2.movie-name {
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 5px;
+}
+/* line 83, ../sass/style.scss */
+#show-results .result .info span.year {
+  color: #888;
+}
