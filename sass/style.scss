@@ -8,7 +8,8 @@
 }
 
 html, body, * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto condensed', sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -16,9 +17,21 @@ body {
 }
 
 .container {
-  width: 70%;
+  max-width:1100px;
   padding: 10px;
   margin: 0 auto;
+}
+
+#header {
+  margin-top: 50px;
+  div {
+  color:#fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: .8em;
+  letter-spacing: 6px;
+  padding-left: 5px;
+}
 }
 
 img#logo {
@@ -29,7 +42,6 @@ img#logo {
 form {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
   * {
     margin-right: 5px;
     border:1px solid #f1f1f1;
@@ -52,6 +64,7 @@ form {
 
 #results-div {
   color:#fff;
+  margin: 0 30px;
   hr {
     border:1px solid #333;
   }
@@ -59,30 +72,116 @@ form {
 
 #show-results {
   margin-top: 40px;
+  // display: flex;
   .result {
-    padding: 5px;
+    padding: 10px;
     margin: 3px;
+      overflow: hidden;
+    text-align: center;
     // box-shadow: 2px 2px 2px #151515;
-    // background-color: #252525;
-    display: flex;
-    align-items: center;
+    background-color: #252525;
     @include crossBrowser(transition, background-color 300ms);
     &:hover {
       background-color: #333;
     }
+    @media (max-width: 660px) {
+      padding: 0;
+    }
     .thumbnail {
-      height: 50px;
+      height: 240px;
+      width: 162px;
+      margin: 0 auto;
+      @media (max-width: 660px) {
+        width: 155px;
+      }
     }
     .info {
-      margin-left: 10px;
-      h2.movie-name {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        h2.movie-name {
+          color:#fff;
         display: inline-block;
-        font-size: 1em;
-        margin-right: 5px;
+        font-size: .85em;
+        }
+        span.year {
+          color:#888;
+        }
       }
-      span.year {
-        color:#888;
+    }
+  }
+}
+
+// ####################################### MOVIE-INFO.HTML #######################################
+
+#mv-lightbox {
+  padding: 10px;
+  .container {
+    display: flex;
+    align-items: center;
+    color:#f1f1f1;
+
+
+    img#mv-poster {
+      margin-right: 15px;
+      @media screen and (max-width: 770px) {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    }
+
+    #mv-details {
+      width: 100%;
+      #mv-heading {
+      display: flex;
+      justify-content: space-between;
+      
+      #mv-name, #rating-num {
+        font-size: 3em;
+        letter-spacing: 3px;
+        @media screen and (max-width: 530px) {
+          font-size: 2em;
       }
+      }
+      #rating-num {
+        color:#EBAB00;
+      }
+    }
+
+    .plot-section {
+      margin: 20px 0;
+      max-width: 600px;
+    }
+
+    #names {
+      font-size: .9em;
+      line-height: 20px;
+    }
+
+    #rest-details {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+
+      @media screen and (max-width: 660px) {
+        display: block;
+        hr { display: none;}
+      }
+      .column {
+        flex-grow: 3;
+      line-height: 20px;
+
+      }
+      hr {
+        margin: 0 10px;
+      }
+    }
+    }
+    @media screen and (max-width: 770px) {
+      display: block;
     }
   }
 }
