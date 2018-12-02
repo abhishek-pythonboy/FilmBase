@@ -66,22 +66,39 @@ html, body, * {
 }
 
 /* line 15, ../sass/style.scss */
+a {
+  color: #f1f1f1;
+}
+/* line 17, ../sass/style.scss */
+a:hover {
+  color: #f1f1f1;
+}
+/* line 19, ../sass/style.scss */
+a:active {
+  color: #f1f1f1;
+}
+/* line 21, ../sass/style.scss */
+a:visited {
+  color: #f1f1f1;
+}
+
+/* line 25, ../sass/style.scss */
 body {
   background-color: #222;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .container {
   max-width: 1100px;
   padding: 10px;
   margin: 0 auto;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 #header {
   margin-top: 50px;
 }
-/* line 27, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 #header div {
   color: #fff;
   text-align: center;
@@ -91,33 +108,33 @@ body {
   padding-left: 5px;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 img#logo {
   display: block;
   margin: 0 auto;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 form {
   display: flex;
   justify-content: center;
 }
-/* line 45, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 form * {
   margin-right: 5px;
   border: 1px solid #f1f1f1;
   border-radius: 3px;
   padding: 8px;
 }
-/* line 51, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 form input[type='text'] {
   width: 300px;
 }
-/* line 54, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 form input[type='number'] {
   width: 100px;
 }
-/* line 57, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 form #submit {
   padding: 0 30px;
   border: 0;
@@ -125,21 +142,21 @@ form #submit {
   color: #fff;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #results-div {
   color: #fff;
   margin: 0 30px;
 }
-/* line 68, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 #results-div hr {
   border: 1px solid #333;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 #show-results {
   margin-top: 40px;
 }
-/* line 76, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 #show-results .result {
   padding: 10px;
   margin: 3px;
@@ -151,129 +168,193 @@ form #submit {
   -o-transition: background-color 300ms;
   transition: background-color 300ms;
 }
-/* line 84, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 #show-results .result:hover {
   background-color: #333;
 }
 @media (max-width: 660px) {
-  /* line 76, ../sass/style.scss */
+  /* line 86, ../sass/style.scss */
   #show-results .result {
     padding: 0;
   }
 }
-/* line 90, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 #show-results .result .thumbnail {
   height: 240px;
   width: 162px;
   margin: 0 auto;
 }
 @media (max-width: 660px) {
-  /* line 90, ../sass/style.scss */
+  /* line 100, ../sass/style.scss */
   #show-results .result .thumbnail {
     width: 155px;
   }
 }
-/* line 98, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 #show-results .result .info {
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 104, ../sass/style.scss */
-#show-results .result .info a h2.movie-name {
+/* line 114, ../sass/style.scss */
+#show-results .result .info h2.movie-name {
   color: #fff;
   display: inline-block;
   font-size: .85em;
 }
-/* line 109, ../sass/style.scss */
-#show-results .result .info a span.year {
+/* line 119, ../sass/style.scss */
+#show-results .result .info span.year {
   color: #888;
 }
 
-/* line 119, ../sass/style.scss */
-#mv-lightbox {
-  padding: 10px;
+/* line 128, ../sass/style.scss */
+.label {
+  color: #BFBFBF;
 }
-/* line 121, ../sass/style.scss */
-#mv-lightbox .container {
-  display: flex;
-  align-items: center;
-  color: #f1f1f1;
-}
-/* line 127, ../sass/style.scss */
-#mv-lightbox .container img#mv-poster {
-  margin-right: 15px;
-}
-@media screen and (max-width: 770px) {
-  /* line 127, ../sass/style.scss */
-  #mv-lightbox .container img#mv-poster {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
+
+@media screen and (max-width: 660px) {
+  /* line 131, ../sass/style.scss */
+  .lity-iframe-container {
+    height: 600px;
   }
 }
 /* line 136, ../sass/style.scss */
+#iFrame {
+  height: 95%;
+  background-color: none;
+}
+
+/* line 141, ../sass/style.scss */
+#mv-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: block;
+  opacity: 0.2;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+/* line 151, ../sass/style.scss */
+#mv-lightbox {
+  z-index: 1;
+  padding: 15px;
+  display: flex;
+  align-self: center;
+}
+/* line 154, ../sass/style.scss */
+#mv-lightbox a {
+  color: #CFE6FA;
+}
+/* line 156, ../sass/style.scss */
+#mv-lightbox a:hover {
+  color: #CFE6FA;
+}
+/* line 158, ../sass/style.scss */
+#mv-lightbox a:active {
+  color: #CFE6FA;
+}
+/* line 160, ../sass/style.scss */
+#mv-lightbox a:visited {
+  color: #CFE6FA;
+}
+/* line 167, ../sass/style.scss */
+#mv-lightbox .container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f1f1f1;
+}
+/* line 176, ../sass/style.scss */
+#mv-lightbox .container img#mv-poster {
+  margin-right: 15px;
+  max-width: 300px;
+}
+@media screen and (max-width: 770px) {
+  /* line 176, ../sass/style.scss */
+  #mv-lightbox .container img#mv-poster {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+/* line 192, ../sass/style.scss */
 #mv-lightbox .container #mv-details {
   width: 100%;
 }
-/* line 138, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 #mv-lightbox .container #mv-details #mv-heading {
   display: flex;
   justify-content: space-between;
 }
-/* line 142, ../sass/style.scss */
-#mv-lightbox .container #mv-details #mv-heading #mv-name, #mv-lightbox .container #mv-details #mv-heading #rating-num {
-  font-size: 3em;
+/* line 198, ../sass/style.scss */
+#mv-lightbox .container #mv-details #mv-heading #mv-name, #mv-lightbox .container #mv-details #mv-heading #mv-year, #mv-lightbox .container #mv-details #mv-heading #rating-num {
+  font-size: 2em;
   letter-spacing: 3px;
 }
 @media screen and (max-width: 530px) {
-  /* line 142, ../sass/style.scss */
-  #mv-lightbox .container #mv-details #mv-heading #mv-name, #mv-lightbox .container #mv-details #mv-heading #rating-num {
+  /* line 198, ../sass/style.scss */
+  #mv-lightbox .container #mv-details #mv-heading #mv-name, #mv-lightbox .container #mv-details #mv-heading #mv-year, #mv-lightbox .container #mv-details #mv-heading #rating-num {
     font-size: 2em;
   }
 }
-/* line 149, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
+#mv-lightbox .container #mv-details #mv-heading #mv-name {
+  display: inline-block;
+  font-weight: bold;
+}
+/* line 206, ../sass/style.scss */
+#mv-lightbox .container #mv-details #mv-heading #imdb-rating {
+  text-align: center;
+}
+/* line 207, ../sass/style.scss */
 #mv-lightbox .container #mv-details #mv-heading #rating-num {
   color: #EBAB00;
 }
-/* line 154, ../sass/style.scss */
+/* line 212, ../sass/style.scss */
 #mv-lightbox .container #mv-details .plot-section {
   margin: 20px 0;
   max-width: 600px;
 }
-/* line 159, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 #mv-lightbox .container #mv-details #names {
   font-size: .9em;
   line-height: 20px;
 }
-/* line 164, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 #mv-lightbox .container #mv-details #rest-details {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
 }
 @media screen and (max-width: 660px) {
-  /* line 164, ../sass/style.scss */
+  /* line 222, ../sass/style.scss */
   #mv-lightbox .container #mv-details #rest-details {
     display: block;
   }
-  /* line 171, ../sass/style.scss */
+  /* line 229, ../sass/style.scss */
   #mv-lightbox .container #mv-details #rest-details hr {
     display: none;
   }
 }
-/* line 173, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 #mv-lightbox .container #mv-details #rest-details .column {
   flex-grow: 3;
   line-height: 20px;
 }
-/* line 178, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 #mv-lightbox .container #mv-details #rest-details hr {
   margin: 0 10px;
+  border: 1px solid #999;
 }
 @media screen and (max-width: 770px) {
-  /* line 121, ../sass/style.scss */
+  /* line 167, ../sass/style.scss */
   #mv-lightbox .container {
     display: block;
   }

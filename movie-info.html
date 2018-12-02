@@ -4,47 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <title>FilmBase</title>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" href="../stylesheets/style.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+  <link rel="stylesheet" href="stylesheets/style.css">
     
 </head>  
 
-  <div id="mv-lightbox">
+<body>
+  <div id="mv-bg"></div>
+    <div id="mv-lightbox">
+    <input type="hidden" id="submit">
     <div class="container">
-          <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt="" id="mv-poster">
+          <img src="" alt="" id="mv-poster">
         <div id="mv-details">
             <div id="mv-heading">
-              <h1 id="mv-name">INCEPTION<span id="mv-year"> (2010)</span></h1>
+              <span><h1 id="mv-name"></h1>&nbsp;<span id="mv-year"></span></span>
               <div id="imdb-rating">
-                imdb rating: <br>
+                <span class="label">imdb:</span> <br>
                 <span id="rating-num">8.8</span>
               </div>
             </div>
             <div class="plot-section">
-              <span>Plot:</span>
+              <span class="label">Plot:</span>
             <div id="mv-plot">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</div>
             </div>
             <div id="names">
-              <p><strong>Director: </strong><span id="mv-director"></span></p>
-              <p><strong>Writer: </strong><span id="mv-writer"></span></p>
-              <p><strong>Stars: </strong><span id="mv-stars"></span></p>
+              <p><strong class="label">Director: </strong><span id="mv-director"></span></p>
+              <p><strong class="label">Writer: </strong><span id="mv-writer"></span></p>
+              <p><strong class="label">Stars: </strong><span id="mv-stars"></span></p>
             </div>
             <div id="rest-details">
               <div class="column">
-                <p>Genre: <span id="genre"></span></p>
-                <p>Awards: <span id="awards"></span></p>
-                <p>Production: <span id="production"></span></p>
-                <p>Website: <span id="website"></span></p>
+                <p><span class="label">Genre:</span> <span id="mv-genre"></span></p>
+                <p><span class="label">Awards:</span> <span id="mv-awards"></span></p>
+                <p><span class="label">Production:</span> <span id="mv-production"></span></p>
+                <p><span class="label">Website:</span> <a id="mv-website" href=""></a></p>
               </div>
               <hr>
               <div class="column">
-                <p>Rated: <span id="rated"></span></p>
-                <p>Released: <span id="released"></span></p>
-                <p>Runtime: <span id="runtime"></span></p>
-                <p>BoxOffice: <span id="boxoffice"></span></p>
+                <p><span class="label">Rated:</span> <span id="mv-rated"></span></p>
+                <p><span class="label">Released:</span> <span id="mv-released"></span></p>
+                <p><span class="label">Runtime:</span> <span id="mv-runtime"></span></p>
+                <p><span class="label">BoxOffice:</span> <span id="mv-boxoffice"></span></p>
                 <p></p>
               </div>
             </div>
@@ -52,10 +52,9 @@
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../js/main.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="js/movie-info.js"></script>
 </html>

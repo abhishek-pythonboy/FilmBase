@@ -12,6 +12,16 @@ html, body, * {
   text-decoration: none;
 }
 
+a {
+  color:#f1f1f1;
+  &:hover 
+  { color:#f1f1f1;}
+  &:active
+  { color:#f1f1f1; }
+  &:visited
+  { color:#f1f1f1; }
+}
+
 body {
   background-color: #222;
 }
@@ -100,7 +110,7 @@ form {
       display: flex;
       justify-content: center;
       align-items: center;
-      a {
+
         h2.movie-name {
           color:#fff;
         display: inline-block;
@@ -109,27 +119,73 @@ form {
         span.year {
           color:#888;
         }
-      }
     }
   }
 }
 
 // ####################################### MOVIE-INFO.HTML #######################################
 
+.label {color:#BFBFBF;}
+
+@media screen and (max-width: 660px) {
+  .lity-iframe-container {
+    height: 600px;
+  }
+}
+
+#iFrame {
+  height: 95%;
+  background-color: none;
+}
+
+#mv-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: block;
+  opacity: 0.2;
+  z-index: -1;
+  filter: blur(8px);
+}
+
 #mv-lightbox {
-  padding: 10px;
+  z-index: 1;
+
+  a {
+  color:#CFE6FA;
+  &:hover 
+  { color:#CFE6FA;}
+  &:active
+  { color:#CFE6FA; }
+  &:visited
+  { color:#CFE6FA; }
+}
+
+  padding: 15px;
+  display: flex;
+  align-self: center;
   .container {
+    width: 100%;
+    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color:#f1f1f1;
 
 
     img#mv-poster {
       margin-right: 15px;
+      max-width: 300px;
       @media screen and (max-width: 770px) {
+        max-width:200px;
         display: block;
         margin: 0 auto;
+        padding: 10px;
+        text-align: center;
         margin-bottom: 20px;
+    }
+    @media screen and (max-width: 350px) {
+      
     }
     }
 
@@ -139,13 +195,15 @@ form {
       display: flex;
       justify-content: space-between;
       
-      #mv-name, #rating-num {
-        font-size: 3em;
+      #mv-name, #mv-year, #rating-num {
+        font-size: 2em;
         letter-spacing: 3px;
         @media screen and (max-width: 530px) {
           font-size: 2em;
       }
       }
+      #mv-name { display: inline-block; font-weight: bold; }
+      #imdb-rating { text-align: center; }
       #rating-num {
         color:#EBAB00;
       }
@@ -177,6 +235,7 @@ form {
       }
       hr {
         margin: 0 10px;
+        border: 1px solid #999;
       }
     }
     }
