@@ -3,44 +3,42 @@
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 
 <head>
-  <meta charset="UTF-8">
-  <title>FilmBase</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/lity.min.css"/>
-  <link rel="stylesheet" href="stylesheets/style.css">
-
-    
+    <meta charset="UTF-8">
+    <title>FilmBase</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/lity.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
+
 <body onload="onLoad();">
-  <div id="header">
-    <div class="container">
-    <img src="images/logo.png" alt="logo" id="logo" width="250px">
-    <div>One stop movie database</div>
-    <form action="">
-      <input type="text" id="input-name" placeholder="Movie Name">
-      <input type="number" id="input-year" placeholder="year" min="1874" max="">
-      <input type="submit" id="submit" onsubmit="onSubmit()" value="Search">
-    </form>
-  </div>
-  </div>
-  
-
-  <div id="results-div">
-    <div class="container">
-      <hr>
-      <div id="show-results">
-      </div>
+    <div id="header">
+        <div class="container">
+            <img src="images/logo.png" alt="logo" id="logo" width="250px">
+            <div>One stop movie database</div>
+            <form action="">
+                <input type="text" id="input-name" placeholder="Movie Name">
+                <input type="number" id="input-year" placeholder="year" min="1874" max="">
+                <input type="submit" id="submit" onsubmit="onSubmit()" value="Search">
+            </form>
+        </div>
     </div>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/lity.min.js"></script>
-  <script src="js/main.js"></script>
-
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <div id="results-div">
+        <div class="container">
+            <hr>
+            <div id="show-results">
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/lity.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
 </body>
+
 </html>

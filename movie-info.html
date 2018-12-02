@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
-<head>
-  <meta charset="UTF-8">
-  <title>FilmBase</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheets/style.css">
-    
-</head>  
 
-<body>
-  <div id="mv-bg"></div>
+<head>
+    <meta charset="UTF-8">
+    <title>FilmBase</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body id="movie-info-body">
+    <div id="mv-bg"></div>
     <div id="mv-lightbox">
-    <input type="hidden" id="submit">
-    <div class="container">
-          <img src="" alt="" id="mv-poster">
-        <div id="mv-details">
-            <div id="mv-heading">
-              <span><h1 id="mv-name"></h1>&nbsp;<span id="mv-year"></span></span>
-              <div id="imdb-rating">
-                <span class="label">imdb:</span> <br>
-                <span id="rating-num">8.8</span>
-              </div>
-            </div>
-            <div class="plot-section">
-              <span class="label">Plot:</span>
-            <div id="mv-plot">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</div>
-            </div>
-            <div id="names">
-              <p><strong class="label">Director: </strong><span id="mv-director"></span></p>
-              <p><strong class="label">Writer: </strong><span id="mv-writer"></span></p>
-              <p><strong class="label">Stars: </strong><span id="mv-stars"></span></p>
-            </div>
-            <div id="rest-details">
-              <div class="column">
-                <p><span class="label">Genre:</span> <span id="mv-genre"></span></p>
-                <p><span class="label">Awards:</span> <span id="mv-awards"></span></p>
-                <p><span class="label">Production:</span> <span id="mv-production"></span></p>
-                <p><span class="label">Website:</span> <a id="mv-website" href=""></a></p>
-              </div>
-              <hr>
-              <div class="column">
-                <p><span class="label">Rated:</span> <span id="mv-rated"></span></p>
-                <p><span class="label">Released:</span> <span id="mv-released"></span></p>
-                <p><span class="label">Runtime:</span> <span id="mv-runtime"></span></p>
-                <p><span class="label">BoxOffice:</span> <span id="mv-boxoffice"></span></p>
-                <p></p>
-              </div>
+        <input type="hidden" id="submit">
+        <div class="container">
+            <img src="" alt="" id="mv-poster">
+            <div id="mv-details">
+                <div id="mv-heading">
+                    <span><h1 id="mv-name"></h1>&nbsp;<span id="mv-year"></span></span>
+                    <div id="imdb-rating">
+                        <span class="label">imdb:</span> <br>
+                        <span id="rating-num">8.8</span>
+                    </div>
+                </div>
+                <div class="plot-section">
+                    <span class="label">Plot:</span>
+                    <div id="mv-plot">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</div>
+                </div>
+                <div id="names">
+                    <p><strong class="label">Director: </strong><span id="mv-director"></span></p>
+                    <p><strong class="label">Writer: </strong><span id="mv-writer"></span></p>
+                    <p><strong class="label">Stars: </strong><span id="mv-stars"></span></p>
+                </div>
+                <div id="rest-details">
+                    <div class="column">
+                        <p><span class="label">Genre:</span> <span id="mv-genre"></span></p>
+                        <p><span class="label">Awards:</span> <span id="mv-awards"></span></p>
+                        <p><span class="label">Production:</span> <span id="mv-production"></span></p>
+                        <p><span class="label">Website:</span> <a id="mv-website" href=""></a></p>
+                    </div>
+                    <hr>
+                    <div class="column">
+                        <p><span class="label">Rated:</span> <span id="mv-rated"></span></p>
+                        <p><span class="label">Released:</span> <span id="mv-released"></span></p>
+                        <p><span class="label">Runtime:</span> <span id="mv-runtime"></span></p>
+                        <p><span class="label">BoxOffice:</span> <span id="mv-boxoffice"></span></p>
+                        <p></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-  </div>
-
-
 </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/movie-info.js"></script>
 
-  <script src="js/movie-info.js"></script>
 </html>
